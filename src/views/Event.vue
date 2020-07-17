@@ -148,13 +148,13 @@
         <img
           v-if="event.image"
           :src="event.image"
-          alt=""
           class="section__event__picture-section__imgae"
+          :alt="event.name"
         />
         <img
           v-else
           src="~@/assets/images/default.jpeg"
-          alt=""
+          :alt="event.name"
           class="card__image"
         />
       </div>

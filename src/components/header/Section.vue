@@ -5,7 +5,7 @@
       <div class="section__events__cards__card">
         <img
           src="assets/test/eventimage.png"
-          alt=""
+          alt="Event Image"
           class="section__events__cards__card__image"
           height="235"
         />
