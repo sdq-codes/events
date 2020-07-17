@@ -1,0 +1,90 @@
+.modal{
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  &__content {
+    background: $white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    width: 470px;
+    padding: 5rem;
+    @media screen and (max-width: $grid__col--md-max * 1px){
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10%;
+    }
+    &__success svg {
+      display: flex;
+      margin-bottom: 5rem;
+      margin-right: auto;
+      margin-left: auto;
+    };
+    &__message {
+      margin-top: 6rem;
+      margin-bottom: 6rem;
+      @include make-text(
+        $font-size: 1.8rem,
+        $line-height: 22px,
+        $font-weight: 700,
+        $font-color: #000000,
+        $font-family: $primary-font-family
+      );
+      text-align: center;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    &__title {
+      @include make-text(
+        $font-size: 1.8rem,
+        $line-height: 22px,
+        $font-weight: 700,
+        $font-color: $primary-text-color
+      );
+      text-transform: uppercase;
+      order: 1;
+    }
+    &__button {
+      order: 2;
+    }
+  }
+  &__seperator {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__btn-close {
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #4AAE9B;
+    background: transparent;
+  }
+}
+
+.modal-fade-enter,
+.modal-fade-leave-active {
+  opacity: 0;
+}
+
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: opacity .5s ease
+}

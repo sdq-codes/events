@@ -1,0 +1,37 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+@import "basics/_variables";
+@import "basics/_fonts";
+@import "basics/_transitions";
+
+@import "mixins/_fonts";
+@import "mixins/_button";
+
+@import "layouts/base";
+@import "layouts/_containers";
+@import "layouts/_header";
+@import "layouts/_footer";
+
+@import "views/sections";
+
+@import "components/_buttons";
+@import "components/_card";
+@import "components/_modal";
+@import "components/_input";
+@import "components/_payment-modal";
+
+body {
+  margin: 0;
+  line-height: 1.15 !important;
+  background-color: #F2F2F2;
+}
+
+a {
+  text-decoration: none;
+}
+
+.disabled {
+  cursor: not-allowed !important;
+}
+.disabled a {
+  cursor: not-allowed !important;
+}

@@ -1,0 +1,22 @@
+@mixin make-text(
+  $font-size,
+  $line-height,
+  $font-weight,
+  $font-color,
+  $font-family: Flutterwave,
+  $cursor-type: default
+) {
+  font: {
+    family: $font-family, Serif;
+    style: normal;
+    weight: $font-weight;
+    size: $font-size;
+  };
+  color: $font-color !important;
+  line-height: $line-height;
+  letter-spacing: 0.508366px;
+  display: block;
+  text-decoration: none;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}

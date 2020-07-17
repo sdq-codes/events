@@ -1,0 +1,83 @@
+.footer {
+  @extend .header;
+  width: 100%;
+  padding: 5rem 0 .5rem 0;
+  &__container {
+    max-width: 958.88px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: $grid__col--responsive-breakpoint * 1px){
+      margin: auto;
+    }
+  }
+  &__list {
+    @extend .header__nav__list;
+    width: 80%;
+  }
+  &__right-footer-links {
+    @extend .header__nav__link;
+    margin-left: auto;
+    display: flex;
+    padding: 0;
+    @media screen and (max-width: $grid__col--sm-max * 1px){
+      display: block;
+    }
+  }
+  &__left-footer-links {
+    @extend .header__nav__link;
+    display: flex;
+    margin-right: auto;
+  }
+  &__left {
+  }
+  &__right {
+    display: flex;
+    &__list {
+      @media screen and (min-width: $grid__col--responsive-breakpoint * 1px){
+        display: block;
+        margin-left: auto;
+      }
+      @media screen and (max-width: $grid__col--responsive-breakpoint * 1px){
+        margin-top: auto;
+        margin-bottom: auto;
+        display: inline-block;
+        -webkit-box-align: center;
+        align-items: center;
+        width: 100%;
+      }
+    }
+    &__item {
+      margin-right: 2.15rem;
+      @media screen and (max-width: $grid__col--responsive-breakpoint * 1px){
+        margin-right: 0;
+      }
+    }
+    &__link {
+      @include make-text(
+              $font-size: 14px,
+              $line-height: 17px,
+              $font-weight: 400,
+              $font-color: $primary-text-color
+      );
+      padding: 16px 20px;
+      @media screen and (max-width: $grid__col--responsive-breakpoint * 1px){
+        text-align: center;
+      }
+    }
+    &__button {
+      @extend .button !optional;
+      @include make-text(
+              $font-size: 12px,
+              $line-height: 14px,
+              $font-weight: 400,
+              $font-color: $white
+      );
+      padding: $header-button-padding;
+    }
+  }
+}

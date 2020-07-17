@@ -1,0 +1,63 @@
+@font-face {
+  font-family: Flutterwave;
+  src: local("Flutterwave"),
+    url('~@/assets/fonts/2b2a06b.ttf')
+    format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Flutterwave;
+  src: local("Flutterwave"),
+    url('~@/assets/fonts/8acb0e3.ttf')
+  format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Flutterwave;
+  src: local("Flutterwave"),
+    url('~@/assets/fonts/5da28fe.ttf')
+  format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Flutterwave;
+  src: local("Flutterwave"),
+    url('~@/assets/fonts/FLW-Italic.ttf')
+  format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: SFProDisplay;
+  src: local("SFProDisplay"),
+    url('~@/assets/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Light.otf')
+  format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SFProDisplay;
+  src: local("SFProDisplay"),
+    url('~@/assets/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Regular.otf')
+  format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: local("OpenSans"),
+    url('~@/assets/fonts/OpenSans-Regular.ttf')
+  format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+

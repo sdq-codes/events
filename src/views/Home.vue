@@ -1,18 +1,39 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="container">
+    <Header />
+    <router-view></router-view>
+    <Footer />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Header from "./../components/Header";
+import Footer from "../components/Footer";
+import { notifications } from "../mixins/notifications";
+import { mapActions } from "vuex";
 
 export default {
   name: "Home",
-  components: {
-    HelloWorld
+  data() {
+    return {};
+  },
+  components: { Footer, Header },
+  mixins: [notifications],
+  created() {
+    this.fetchEvents()
+      .then(() => {
+        this.notify("Events have been successfully loaded", "success");
+      })
+      .catch(() => {
+        this.notify("Events have been successfully loaded", "error");
+      });
+  },
+  methods: {
+    ...mapActions("events", {
+      fetchEvents: "addToEvents"
+    })
   }
 };
 </script>
+
+<style scoped></style>

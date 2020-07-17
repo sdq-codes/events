@@ -1,0 +1,64 @@
+.card {
+  @extend .container__col-md-4;
+  @extend .container__col-sm-12;
+  margin-bottom: 3rem;
+  &__container {
+    padding-right: 10px;
+    padding-left: 10px;
+    @media screen and (max-width: $grid__col--responsive-breakpoint * 1px){
+
+    }
+  }
+  &__image {
+    border-radius: $card-image-border-radius;
+    object-fit: cover;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.306764);
+    width: 100%;
+    margin: 0 0 14px 0;
+  }
+  &__date {
+    @include make-text(
+            $font-size: 1.2rem,
+            $line-height: 14px,
+            $font-weight: 400,
+            $font-color: $secondary-black-color,
+            $font-family: $secondary-font-family
+    );
+    vertical-align: top;
+    text-transform: uppercase;
+    margin: 5px 0 0 0;
+  }
+  &__title {
+    @include make-text(
+            $font-size: 1.8rem,
+            $line-height: 22px,
+            $font-weight: bold,
+            $font-color: $primary-text-color,
+            $font-family: $primary-font-family
+    );
+    margin: 5px 0 0 0;
+    text-transform: uppercase;
+  }
+  &__money {
+    @include make-text(
+      $font-size: 1.4rem,
+      $line-height: 17px,
+      $font-weight: 400,
+      $font-color: $secondary-black-color,
+      $font-family: $primary-font-family
+    );
+    vertical-align: top;
+    text-transform: uppercase;
+    margin: 5px 0 0 0;
+  }
+  &__sold-out {
+    @extend .card__date;
+    font-weight: bold;
+    color: $warning-color;
+  }
+  &__free {
+    @extend .card__date;
+    font-weight: bold;
+    color: $success-color;
+  }
+}

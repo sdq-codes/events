@@ -1,0 +1,11 @@
+.justify-center{
+  @include justify($center)
+}
+
+.justify-left{
+  @include justify($left)
+}
+
+.justify-right {
+  @include justify($right)
+}

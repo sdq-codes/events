@@ -1,0 +1,32 @@
+.form-group {
+  width: 100%;
+  margin-bottom: 30px;
+  &__label {
+    display: block;
+    width: 100%;
+    @include make-text(
+      $font-size: 1.6rem,
+      $line-height: 22px,
+      $font-weight: normal,
+      $font-color: $primary-text-color,
+      $font-family: $tertiary-font-family
+    );
+    vertical-align: top;
+    margin-bottom: 14px;
+  }
+  &__input {
+    background: #FDFDFD;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    width: 100%;
+    height: 51px;
+    padding: 10px 12px;
+    @include make-text(
+            $font-size: 1.4rem,
+            $line-height: 20px,
+            $font-weight: normal,
+            $font-color: $primary-text-color,
+            $font-family: $tertiary-font-family
+    );
+  }
+}

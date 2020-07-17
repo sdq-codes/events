@@ -1,0 +1,221 @@
+.payment-modal {
+  @extend .container__row;
+  justify-content: space-between;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #F2F2F2;
+  &__tickets {
+    @extend .container__col-md-7;
+    @extend .container__col-sm-12;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    @media screen and (min-width: $grid__col--md-max * 1px){
+      padding-top: 50px;
+
+    }
+    &__content {
+      @media screen and (min-width: $grid__col--md-max * 1px){
+        max-width: 500px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    &__close-button {
+      @extend .close-button;
+      width: 125px;
+    }
+    &__header {
+      @include make-text(
+        $font-size: 3.6rem,
+        $line-height: 40px,
+        $font-weight: 900,
+        $font-color: #12122C,
+        $font-family: $primary-font-family
+      )
+    }
+    &__date {
+      @include make-text(
+        $font-size: 1.8rem,
+        $line-height: 24px,
+        $font-weight: 400,
+        $font-color: #4F4F4F,
+        $font-family: $tertiary-font-family
+      );
+      padding-bottom: 60px;
+    }
+    &__ticket {
+      display: flex;
+      border-bottom: 1px solid #BDBDBD;
+      width: 100%;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      &__name {
+        @include make-text(
+          $font-size: 2.4rem,
+          $line-height: 24px,
+          $font-weight: 400,
+          $font-color: #333333,
+          $font-family: $primary-font-family
+        );
+        flex-grow: 5;
+      }
+      &__price {
+        @extend .payment-modal__tickets__ticket__name;
+        font-weight: bold;
+        flex-grow: 4;
+      }
+      &__quantity {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        &__round-button {
+          width: 20px;
+          height: 20px;
+          box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.25);
+          border-radius: 50%;
+          background-color: white;
+          display: flex;
+          cursor: pointer;
+          &__sign {
+            width: 100%;
+            margin-top: auto;
+            margin-bottom: auto;
+          }
+        }
+        &__text {
+          @extend .payment-modal__tickets__ticket__name;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+      &__end-date {
+        @include make-text(
+          $font-size: 1.4rem,
+          $line-height: 28px,
+          $font-weight: 400,
+          $font-color: #828282,
+          $font-family: $primary-font-family
+        );
+        margin-top: 14px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__order-group {
+    @extend .container__col-md-4;
+    @extend .container__col-sm-12;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    @media screen and (min-width: $grid__col--md-max * 1px){
+      padding: 51px 50px;
+    }
+  }
+  &__order {
+    width: 100%;
+    &__title {
+      @include make-text(
+        $font-size: 1.8rem,
+        $line-height: 22px,
+        $font-weight: 700,
+        $font-color: #333333,
+        $font-family: $primary-font-family
+      );
+      border-bottom: 1px solid #BDBDBD;
+      padding-bottom: 30px;
+      margin-bottom: 34px;
+      vertical-align: top;
+      svg {
+        cursor: pointer;
+        position: relative;
+        top: 7px;
+        margin-right: 10px;
+      }
+    }
+    &__ticket-info {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 24px;
+      width: 100%;
+      &__type {
+        @include make-text(
+          $font-size: 1.4rem,
+          $line-height: 17px,
+          $font-weight: 700,
+          $font-color: #333333,
+          $font-family: $primary-font-family
+        );
+        &__total {
+          @include make-text(
+            $font-size: 1.4rem,
+            $line-height: 17px,
+            $font-weight: 700,
+            $font-color: #333333,
+            $font-family: $primary-font-family
+          );
+          padding-top: 10px;
+        }
+      }
+      &__price {
+        @include make-text(
+          $font-size: 1.4rem,
+          $line-height: 17px,
+          $font-weight: 400,
+          $font-color: #4F4F4F,
+          $font-family: $primary-font-family
+        );
+        &__total {
+          @include make-text(
+            $font-size: 2.4rem,
+            $line-height: 29px,
+            $font-weight: 700,
+            $font-color: #333333,
+            $font-family: $primary-font-family
+          );
+          vertical-align: top;
+        }
+      }
+      &__order-summary {
+        margin-top: 179px;
+        border-top: 1px solid #BDBDBD;
+        padding-top: 34px;
+      }
+    }
+  }
+  &__guarantee {
+    display: flex;
+    margin-top: 27px;
+    justify-content: left;
+    &__info {
+      padding-left: 10px;
+      &__title {
+        @include make-text(
+          $font-size: 1.4rem,
+          $line-height: 14px,
+          $font-weight: 700,
+          $font-color: #333333,
+          $font-family: $primary-font-family
+        );
+      }
+      &__sub-title {
+        @include make-text(
+        $font-size: 1.3rem,
+        $line-height: 14px,
+        $font-weight: 400,
+        $font-color: #828282,
+        $font-family: $primary-font-family
+        );
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@mixin make-button(
+  $font-size: 1.4rem,
+  $line-height: 14px,
+  $font-weight: 700,
+  $font-color: $white,
+  $padding-top: 18px,
+  $padding-bottom: 18px
+) {
+  @extend .button !optional;
+  @include make-text(
+    $font-size: $font-size,
+    $line-height: $line-height,
+    $font-weight: $font-weight,
+    $font-color: $font-color
+  );
+  text-align: center;
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+  }
+  &:hover {
+    background-color: #c88009;
+  }
+  &:active {
+    background-color: #F5A623;
+  }
+}
