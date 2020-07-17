@@ -32,29 +32,6 @@ export default {
     };
   },
   methods: {
-    placeOrder() {
-      window.FlutterwaveCheckout({
-        public_key: "INSERT YOUR PUBLIC KEY",
-        tx_ref: "new-sale" + new Date(),
-        amount: 29.99,
-        currency: "USD",
-        country: "NG",
-        payment_options: "card",
-        customer: {
-          email: "ekene@gmail.com",
-          phone_number: "+234702909304",
-          name: "Ekene Eze"
-        },
-        callback: function(data) {
-        },
-        onclose: function() {},
-        customizations: {
-          title: "MealsHub",
-          description: "Payment for selected meal",
-          logo: "http://localhost:1337/uploads/beef_b538baa14d.png"
-        }
-      });
-    }
   }
 };
 </script>
