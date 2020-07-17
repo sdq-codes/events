@@ -262,7 +262,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.event);
   },
   methods: {
     requestFreeOrder() {

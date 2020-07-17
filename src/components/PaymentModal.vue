@@ -46,7 +46,6 @@ export default {
           name: "Ekene Eze"
         },
         callback: function(data) {
-          console.log(data);
         },
         onclose: function() {},
         customizations: {
