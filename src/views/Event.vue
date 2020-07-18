@@ -119,7 +119,7 @@
         </h6>
         <div class="section__event__section__button-cover">
           <Button
-            v-if="!event.is_free"
+            v-if="event.is_free"
             :text="'Register for free'"
             @clicked="toggleShow"
           />
